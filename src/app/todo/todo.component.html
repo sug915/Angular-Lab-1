@@ -1,0 +1,45 @@
+<div class ="whole">
+
+    <div class="whiteBox">
+        <p class = "titleOf">TODO List</p>
+        <p class = "description">A place to store your todos</p>
+        <input type="text" value="Filter your to-dos"/>
+    
+        <div class="ifClass" *ngFor="let todo of todoList; index as i">
+            <p>{{i + 1}}. </p>
+            <button *ngIf="!todo.completed"class="complete_button">Complete</button>
+            <div class = "spacingThis">
+                <p>{{ todo.task }}</p>
+                <button class="remove"(click)="removeTask(i)">X</button>
+            </div>
+        </div>
+    <input type="text" value="Add your to-do">
+    <button class="add_button">Add</button>
+    </div>
+    
+</div>
+    <!-- <label for="newtask">Task: </label>
+<input
+type="text",
+id="newtask",
+ngModel,
+name="newtask" >
+
+
+
+</div>
+
+<!-- 
+<div>
+<label for="newtask">Task: </label>
+<input
+type="text",
+id="newtask",
+ngModel,
+name="newtask" >
+<button>Add</button>
+
+
+
+
+</div> -->
